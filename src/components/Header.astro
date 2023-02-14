@@ -1,0 +1,84 @@
+---
+import HeaderLinks from './HeaderLinks.astro';
+import MenuIcons from './MenuIcons.astro';
+export interface Props {
+	htitle: string;
+	hurl: string;
+}
+const {htitle ,hurl} = Astro.props;
+---
+<header class="bc2">
+  <div class="header vbox flex jcontent-between">
+    
+    <div class="htitle flex">
+      <a href="/" class="tc1">تربتی</a>
+      <a href={hurl} class="tc4">{htitle}</a>
+      <p class="khat sm-hide tc1">|</p>
+      <HeaderLinks classList="sm-hide"/>
+    </div>
+    <div id="hamburger" class="hamburger flex jcontent-between aitems-center md-hide">
+      <div class="h1"></div>
+      <div class="h2"></div>
+      <div class="h3"></div>
+    </div>
+    <MenuIcons  classList="sm-hide"/>
+  </div>
+</header>
+<div id="menu" class="menu hidden flex flex-col jcontent-between md-hide">
+  <HeaderLinks/>
+  <MenuIcons/>
+</div>
+
+<script type="module">
+  const hamburger = document.querySelector("#hamburger");
+  const menu = document.querySelector("#menu");
+  function toggle_hamburger(){
+    hamburger.classList.toggle("clicked")
+    menu.classList.toggle("hidden")
+  }
+  hamburger.addEventListener('click', toggle_hamburger);
+</script>
+
+<style>
+  .htitle{gap:8px;}
+  .htitle a{font-weight:bolder;font-size:larger;text-decoration:none;transition:transform 0.3s ease-in-out;}
+  .htitle a:hover{transform:translate(0,-4px);}
+  
+  .khat{font-weight:bolder;transform: translate(0,4px);cursor:default}
+
+  header{
+    width:100vw;
+    position: sticky;
+    top:0;
+    left:0;
+    z-index:21;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 4px 8px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
+  }
+  .header{
+    height:3rem;
+    display:flex;
+    align-items:center;
+  }
+  .menu{
+    width:100vw;
+    height: calc(100vh - 3rem);
+    background-color:#313131;
+    margin-top:3rem;
+    padding:1.5rem 0;
+    
+    position:fixed;
+    top:0px;
+    left:0px;
+    
+    transition:transform 0.3s ease;
+    z-index:20;
+  }
+  @media(min-width:768px){.menu{width:24rem;}}
+  .hidden{transform:translate(-100%);}
+
+  .hamburger{width:28px;height:48px;cursor:pointer;}
+  .h1,.h2,.h3{width:8px;height:8px;border-radius:50%;background:#EEF0F2;transition:background-color 0.3s ease;}
+  .clicked .h1,.clicked .h2,.clicked .h3{width:8px;height:8px;background:#DA627D;}
+  
+
+</style>
