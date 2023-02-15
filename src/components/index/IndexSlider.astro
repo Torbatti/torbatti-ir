@@ -1,0 +1,28 @@
+---
+
+---
+<div class="slider flex flex-col sm-hide">
+  <a href="#about">  درباره</a>
+  <a href="#projects"> پروژه ها</a>
+  <a href="#tools"> وسیله ها</a>
+  <a href="#contact"> تماس با من</a>
+</div>
+
+<style>
+  .slider{
+    position:fixed;
+    top: 50%;
+    left:0px;
+    z-index:19;
+    text-align:center;
+    padding-left:16px;
+    gap: 8px;
+  }
+  .slider a{
+    text-decoration:none;color:#272727;font-weight:bolder;
+    padding:0 8px;background-color:#EEF0F2;border-radius:10px;border:2px solid #272727;
+    transition:transform 0.2s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 4px 8px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
+  }
+  .slider a:hover{transform: translate(8px);}
+</style>
