@@ -23,3 +23,5 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl;}
 
 @media(max-width:768px){.sm-hide{display:none;}}
 @media(min-width:768px){.md-hide{display:none;}}
+
+.low-gap{gap:8px;}.mid-gap{gap:16px;}.high-gap{gap:24px;}
