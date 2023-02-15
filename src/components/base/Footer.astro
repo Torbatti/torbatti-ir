@@ -1,0 +1,17 @@
+---
+import BaseLinks from "./BaseLinks.astro";
+---
+<footer class="bc2">
+  <div class="footer vbox  grid">
+    <div class="right">
+      <!-- <BaseLinks class="links flex flex-col low-gap"/> -->
+    </div>
+    <div class="middle"></div>
+    <div class="left"></div>
+  </div>
+</footer>
+
+<style>
+  .footer{height:20rem;}
+  @media(min-width:768px){.footer{grid-template-columns:repeat(3,1fr);}}
+</style>

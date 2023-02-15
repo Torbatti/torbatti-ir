@@ -1,0 +1,88 @@
+---
+import BaseLinks from './BaseLinks.astro';
+export interface Props {
+	htitle: string;
+	hurl: string;
+}
+const {htitle ,hurl} = Astro.props;
+---
+<header class="bc2 box-row">
+  <div class="header vbox flex jcontent-between aitems-center">
+    
+    <div class="htitle flex flex-row low-gap">
+      <a href="/" class="tc1">تربتی</a>
+      <a href={hurl} class="tc4">{htitle}</a>
+      <p class="khat sm-hide tc1">|</p>
+      <BaseLinks class="links flex flex-row mid-gap sm-hide"/>
+    </div>
+    <div class="menu-icons flex jcontent-center aitems-center sm-hide">
+      <a href="https://github.com/Torbatti/torbatti-ir" target="_blank" class="gicon"><img src="github.svg" alt="github icon" width="32px" ></a>
+    </div>
+    <div id="hamburger" class="hamburger flex flex-row jcontent-between aitems-center md-hide">
+      <div class="h1"></div>
+      <div class="h2"></div>
+      <div class="h3"></div>
+    </div>
+  </div>
+</header>
+
+<div id="menu" class="menu menu-hidden box-row  flex flex-col jcontent-between md-hide">
+  <BaseLinks class="links flex flex-col aitems-center high-gap"/>
+  <div>
+    <div class="menu-icons box-row flex jcontent-center aitems-center">
+      <a href="https://github.com/Torbatti/torbatti-ir" target="_blank" class="gicon"><img src="github.svg" alt="github icon" width="32px" ></a>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  const hamburger = document.querySelector("#hamburger");
+  const menu = document.querySelector("#menu");
+  function toggle_hamburger(){
+    hamburger.classList.toggle("clicked")
+    menu.classList.toggle("menu-hidden")
+  }
+  hamburger.addEventListener('click', toggle_hamburger);
+</script>
+
+<style>
+
+  @media(min-width:768px){
+    .gicon img{
+      width:24px;
+      display:grid;
+      justify-content:center;
+      align-items:center;
+    }
+    a{transition:transform 0.3s ease-in-out;}
+    a:hover{transform:translate(0,-4px);}
+  }
+
+  .htitle a{font-weight:bolder;font-size:larger;text-decoration:none;transition:transform 0.3s ease-in;}
+  .htitle a:hover{transform:translate(0,-4px);}
+  
+  .khat{font-weight:bolder;transform: translate(0,4px);cursor:default}
+
+  header{
+    z-index:21;position:sticky;top:0;left:0;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 4px 8px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
+  }
+  .header{height:3rem;}
+  .menu{
+    height: calc(100vh - 3rem);
+    background-color:#313131;
+    margin-top:3rem;padding:1.5rem 0;
+    
+    z-index:20;position:fixed;top:0px;left:0px;
+    
+    transition:transform 0.3s ease;
+  }
+  @media(min-width:768px){.menu{width:24rem;}}
+  .menu-hidden{transform:translate(-100%);}
+
+  .hamburger{width:32px;height:48px;cursor:pointer;}
+  .h1,.h2,.h3{width:8px;height:8px;border-radius:50%;background:#EEF0F2;transition:background-color 0.3s ease;}
+  .clicked .h1,.clicked .h2,.clicked .h3{background:#DA627D;}
+  
+
+</style>

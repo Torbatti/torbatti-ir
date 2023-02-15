@@ -1,0 +1,17 @@
+---
+const {class: className} = Astro.props;
+---
+<div class={className}>
+  <a href="blog">بلاگ</a>
+  <a href="about">درباره</a>
+  <a href="project">دستاورد</a>
+  <a href="contact">تماس</a>
+</div>
+
+<style>
+  .links a{
+    color:#EEF0F2;font-size:medium;font-weight:bold;
+  }
+  .links a{transition:transform 0.3s ease-in,color 0.25s ease-in;}
+  .links a:hover{transform:translate(0,-4px);color:#DA627D;}
+</style>
