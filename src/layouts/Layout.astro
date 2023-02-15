@@ -1,5 +1,6 @@
 ---
-import Header from "../components/Header.astro";
+import Header from "../components/base/Header.astro";
+import Footer from "../components/base/Footer.astro";
 
 import "../style/albors.css";
 
@@ -22,5 +23,6 @@ const { title ,htitle ,hurl} = Astro.props;
 	<body class="bc1">
 		<Header htitle={htitle} hurl={hurl}/>
 		<slot/>
+		<Footer/>
 	</body>
 </html>
