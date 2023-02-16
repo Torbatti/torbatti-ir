@@ -1,0 +1,21 @@
+#reactAnimate{
+  position:absolute;
+  width:100vw;
+  height:calc(100vh + 3rem);
+  z-index:4;
+}
+.reactLogos{
+  position:absolute;
+  width:32px;
+  height:32px;
+  background-size:cover;
+  filter:
+  drop-shadow(-1px -1px 0px #DA627D) 
+  drop-shadow(1px -1px 0px #DA627D) 
+  drop-shadow(1px 1px 0px #DA627D)
+  drop-shadow(-1px 1px 0px #DA627D);
+}
+.logo1{background-image:url("/logos/react.svg");}
+.logo2{background-image:url("/logos/rust.svg");}
+.logo3{background-image:url("/logos/python.svg");}
+.logo4{background-image:url("/logos/go.svg");}
