@@ -1,21 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import IndexSlider from "../components/index/IndexSlider.astro";
 import BaseContactMe from "../components/base/BaseContactMe.astro";
+import IndexSlider from "../components/index/IndexSlider.astro";
+import IndexAboutSection from "../components/index/IndexAboutSection.astro";
+import IndexProjectsSection from "../components/index/IndexProjectsSection.astro";
 ---
 
 <Layout title="خانه" htitle="" hurl="">
   <IndexSlider/>
+  <IndexAboutSection/>
+  <IndexProjectsSection/>
 
-  <div class="box-page bc6" id="about">
-    
-  </div>
 
-  <div class="box-page bc7" id="projects">
-
-  </div>
-
-  <div class="box-page bc6" id="tools">
+  <div class="box-page bc6" id="technologies">
 
   </div>
 
@@ -28,8 +25,7 @@ import BaseContactMe from "../components/base/BaseContactMe.astro";
 <style>
   
   .bc6{background: linear-gradient(90deg, rgba(238,240,242,1) 0%, rgba(218,218,218,1) 100%); }
-  .bc7{background: linear-gradient(90deg, rgba(218,98,125,1) 0%, rgba(187,97,117,1) 100%); }
-  
+
   #contact{background-color:#313131;}
 
 </style>
