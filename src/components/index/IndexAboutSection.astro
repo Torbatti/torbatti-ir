@@ -1,0 +1,89 @@
+---
+import "../../style/about.css"
+
+---
+<div class="box-page grid jcontent-center aitems-center" id="about">
+  <div class="about flex">
+    <div class="me-pic">
+    </div>
+    <div class="me-text flex flex-col jcontent-center aitems-center">
+       <h1 class="tc2">برنامه نویس</h1>
+       <h2 class="tc4">فول استک</h2>
+    </div>
+  </div>
+  <div class="svg-animate sm-hide" id="reactAnimate"></div>
+</div>
+
+<script type="module">
+
+  let velocity;
+  const h = window.innerHeight - 32; 
+  const w = window.innerWidth - 32;
+  const reactAnimate = document.querySelector("#reactAnimate");
+  
+  console.log(w);
+  console.log(h);
+
+  for (let i = 0; i < 32; i++) {
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("reactLogos");
+
+    if(i % 4 == 0){
+    newDiv.classList.add("logo1");
+    }else if(i % 4 == 1){
+    newDiv.classList.add("logo2");
+    }else if(i % 4 == 2){
+    newDiv.classList.add("logo3");
+  
+    }else{
+    newDiv.classList.add("logo4");
+    } 
+
+    const tempTop = Math.random() * h;
+    const tempright = Math.random() * w;
+
+    const newDivTop = tempTop + "px";
+    const newDivRight = tempright + "px";
+
+    newDiv.style.top= newDivTop;
+    newDiv.style.right= newDivRight;
+
+    console.log(newDivTop);
+    reactAnimate.appendChild(newDiv);
+  }
+
+</script>
+
+<style>
+  .about{
+    width:85vw;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:5;
+  }
+  .me-pic{
+    width:320px;
+    height:480px;
+    background-image: url("https://picsum.photos/seed/21/480/480/?blur=4");background-size:cover;
+    padding:0 8px;background-color:#EEF0F2;border-radius:10px;border:2px solid #272727;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 4px 8px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
+  }
+  .me-text{
+    text-align:center;
+    font-size:x-large;
+  }
+  @media(min-width:768px){
+    .about{
+      flex-direction:row;
+      justify-content:space-around;
+    }
+    .me-pic{
+      width:480px;
+      height:720px;
+    }
+  }
+
+
+
+</style>
