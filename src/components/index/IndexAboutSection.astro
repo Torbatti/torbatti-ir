@@ -11,7 +11,7 @@ import "../../style/about.css"
        <h2 class="tc4">فول استک</h2>
     </div>
   </div>
-  <div class="svg-animate sm-hide" id="reactAnimate"></div>
+  <div class="svg-animate" id="reactAnimate"></div>
 </div>
 
 <script type="module">
@@ -23,8 +23,13 @@ import "../../style/about.css"
   
   console.log(w);
   console.log(h);
-
-  for (let i = 0; i < 32; i++) {
+  let n;
+  if (w<768){
+    n = 16
+  }else{
+    n=32
+  }
+  for (let i = 0; i < n; i++) {
     const newDiv = document.createElement("div");
     newDiv.classList.add("reactLogos");
 
