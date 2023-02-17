@@ -1,6 +1,44 @@
 ---
-
+import "../../style/techno.css"
 ---
 <div class="box-page bc6" id="technologies">
+  <div class="techno-text box-page">
 
+  </div>
+  <div class="hamburger box-page grid jcontent-center aitems-center">
+    <div class="hamburger-parts" id="top"></div>
+    <div class="hamburger-parts" id="middle"></div>
+    <div class="hamburger-parts" id="bottom"></div>
+  </div>
 </div>
+
+<script type="module">
+  const topD = document.querySelector("#top");
+  const middleD = document.querySelector("#middle");
+  const bottomD = document.querySelector("#bottom");
+  
+  const text = document.querySelector("#text");
+  const frontend = document.querySelector("#frontend");
+  const tools = document.querySelector("#tools");
+  const backend = document.querySelector("#backend");
+
+  function toggle_gray(){
+    topD.style.filter = "grayscale(100%)";
+    middleD.style.filter = "grayscale(100%)";
+    bottomD.style.filter = "grayscale(100%)";
+  }
+  function hide_text(){
+
+  }
+  function toggle_color(div,text){
+    toggle_gray();
+    div.style.filter="grayscale(0%)";
+    div.classList.toggle("hide");
+  }
+  topD.addEventListener('click',()=>(toggle_color(topD)));
+  middleD.addEventListener('click',()=>(toggle_color(middleD)));
+  bottomD.addEventListener('click',()=>(toggle_color(bottomD)));
+
+  
+
+</script>
