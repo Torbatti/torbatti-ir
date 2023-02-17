@@ -8,14 +8,14 @@
   position:absolute;
   width:32px;
   height:32px;
-  background-size:cover;
+  background-size:contain;
   filter:
   drop-shadow(-1px -1px 0px #DA627D) 
   drop-shadow(1px -1px 0px #DA627D) 
   drop-shadow(1px 1px 0px #DA627D)
   drop-shadow(-1px 1px 0px #DA627D);
 }
-.logo1{background-image:url("/logos/react.svg");}
-.logo2{background-image:url("/logos/rust.svg");}
-.logo3{background-image:url("/logos/python.svg");}
-.logo4{background-image:url("/logos/go.svg");}
+.logo1{background:url("/logos/logo1.svg")no-repeat;}
+.logo2{background:url("/logos/logo2.svg")no-repeat;}
+.logo3{background:url("/logos/logo3.svg")no-repeat;}
+.logo4{background:url("/logos/logo4.svg")no-repeat;}
