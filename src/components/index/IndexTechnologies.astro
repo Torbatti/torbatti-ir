@@ -2,10 +2,43 @@
 import "../../style/techno.css"
 ---
 <div class="box-page bc6" id="technologies">
-  <div class="techno-text box-page">
-
+  <div class="techno-text box-row">
+    <div class="box-middle">
+      <div class="text-box" id="text">
+        <div class="box-title">
+          <h1 class="tc4">
+            تکلنولوژی 
+          </h1>
+        </div>
+          <div class="box-text">
+            <h2 class="tc4">فرانت اند :</h2>
+            <h4 class="tc2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo maiores natus corporis rem consequatur </h4>
+          </div>
+          <div class="box-text">
+            <h2 class="tc4">وسیله ها :</h2>
+            <h4 class="tc2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo maiores natus corporis rem consequatur </h4>
+          </div>
+          <div class="box-text">
+            <h2 class="tc4">بک اند :</h2>
+            <h4 class="tc2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo maiores natus corporis rem consequatur </h4>
+          </div>
+      </div>
+      <div class="text-box" id="frontend">
+        <h1 class="box-title tc4">فرانت اند</h1>
+        <div class="box-text"></div>
+      </div>
+      <div class="text-box" id="tools">
+        <h1 class="box-title tc4">ابزار ها</h1>
+        <div class="box-text"></div>
+      </div>
+      <div class="text-box" id="backend">
+        <h1 class="box-title tc4">بک اند</h1>
+        <div class="box-text"></div>
+      </div>
+    </div>
   </div>
-  <div class="hamburger box-page grid jcontent-center aitems-center">
+  
+  <div class="tech-hamburger box-page">
     <div class="hamburger-parts" id="top"></div>
     <div class="hamburger-parts" id="middle"></div>
     <div class="hamburger-parts" id="bottom"></div>
@@ -22,22 +55,30 @@ import "../../style/techno.css"
   const tools = document.querySelector("#tools");
   const backend = document.querySelector("#backend");
 
+  hide_text();
+  text.style.display="flex";
+
+
   function toggle_gray(){
     topD.style.filter = "grayscale(100%)";
     middleD.style.filter = "grayscale(100%)";
     bottomD.style.filter = "grayscale(100%)";
   }
   function hide_text(){
-
+    text.style.display="none";
+    frontend.style.display="none";
+    tools.style.display="none";
+    backend.style.display="none";
   }
-  function toggle_color(div,text){
+  function toggle(div,text){
     toggle_gray();
+    hide_text();
     div.style.filter="grayscale(0%)";
-    div.classList.toggle("hide");
+    text.style.display="flex";
   }
-  topD.addEventListener('click',()=>(toggle_color(topD)));
-  middleD.addEventListener('click',()=>(toggle_color(middleD)));
-  bottomD.addEventListener('click',()=>(toggle_color(bottomD)));
+  topD.addEventListener('click',()=>(toggle(topD,frontend)));
+  middleD.addEventListener('click',()=>(toggle(middleD,tools)));
+  bottomD.addEventListener('click',()=>(toggle(bottomD,backend)));
 
   
 
