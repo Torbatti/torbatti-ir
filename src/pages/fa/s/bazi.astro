@@ -1,0 +1,73 @@
+---
+import Base from "@layouts/Base.astro";
+
+const title = "تربتی | Torbatti"
+const author = "آریا بختیاری | Arya Bakhtiari"
+const description = ""
+const key_words = ""
+
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("shelf");
+const filteredPosts = allPosts.filter((post) =>
+    post.data.type === "bazi"
+);
+---
+<Base title={title} author={author} description={description} key_words={key_words} >
+
+
+	<div id="baziha" class="box">
+		{filteredPosts.map((post) => (
+			<a href={`/s/${post.slug}`} class="bazi">
+				<img src={`/images/shelf/games/${post.data.img[0]}`} alt="">
+				<div class="cover"></div>
+				<h2 class="title">{post.data.title}</h2>
+			</a>
+		))}
+	</div>
+
+</Base>
+
+<style>
+	#baziha{
+		display:grid;
+		gap:.5rem;
+	}
+	@media (min-width:360px)    {#baziha{}}
+	@media (min-width:720px)    {#baziha{}}
+	@media (min-width:1070px)   {#baziha{grid-template-columns:repeat(8,1fr);}}
+
+	.bazi{border-radius:.5rem;}
+	.bazi img{border-radius:.5rem;}
+	
+	.bazi{position:relative;}
+
+	.bazi .cover{
+		background-color:transparent;
+
+		width:100%;
+		height:100%;
+		border-radius:.5rem;
+
+		top:0;
+		z-index:10;
+
+		position:absolute;
+		transition: background .25s;
+	}
+
+	.bazi:hover .cover{
+		background-color:rgba(148, 148, 148, 0.61);
+	}
+
+	.bazi h2{
+		width:100%;
+
+		position:absolute;
+		top:50%;
+		z-index:-100;
+
+		text-align:center;
+		color:var(--c02);
+	}
+	.bazi:hover h2{z-index:10;}
+</style>
