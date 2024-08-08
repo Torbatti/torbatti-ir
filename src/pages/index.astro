@@ -1,56 +1,182 @@
 ---
 import Base from "@layouts/Index.astro";
+import Header from "@components/base/Header.astro";
+import Ebteda from "@components/index/Ebteda.astro";
 
 const title = "تربتی | Torbatti"
 const author = "آریا بختیاری | Arya Bakhtiari"
 const description = ""
 const key_words = ""
+
+import arrow from "../assets/images/corner_down_left.svg"
 ---
 <Base title={title} author={author} description={description} key_words={key_words} >
 
+	<!-- <Header/> -->
+	<!-- <Ebteda/> -->
+	<div id="main">
+		<div id="header">
+			<p>تربتی</p>
+		</div>
+		
+		<div id="sidebar">
 
-	<div id="notarin">
+			<div class="side_box">
+				<div><img src={arrow.src} alt=""><h2>پیوندها</h2></div>
+			  <p><a href="http://github.com/torbatti" target="_blank" rel="noopener noreferrer">گیت هاب</a></p>
+			</div>
 
+			<div class="side_box">
+				<div><img src={arrow.src} alt=""><h2>نوشتارها</h2></div>
+				<p><a href="">فنآوری</a></p>
+				<p><a href="">طاقچه</a></p>
+				<p><a href="">آیین</a></p>
+				<p><a href="">زبان</a></p>
+				<p><a href="">سرگذشت</a></p>
+				<p><a href="">سوداگری</a></p>
+			</div>
+
+			<div class="side_box">
+				<div><img src={arrow.src} alt=""><h2>طاقچه</h2></div>
+				<p><a href="">مصورها</a></p>
+				<p><a href="">نوشتارگان</a></p>
+				<p><a href="">بازی ها</a></p>
+				<p><a href="">نماواگان</a></p>
+				<p><a href="">نواها</a></p>
+			</div>
+
+
+			<div class="theme_selector">
+				<img src={arrow.src} alt="">
+				<div class="dark"></div>
+				<div class="light"></div>
+			</div>
+
+			<div class="arya_bakhtiari">
+				<p>تولید و توسعه</p>
+				<p><span> با عشق </span></p>
+				<p>آریا بختیاری</p>
+			</div>
+
+		</div>
+
+		<div id="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem fugit soluta, recusandae in distinctio aperiam earum perspiciatis architecto dolorem, corrupti quas ipsum est error nemo officiis. Nostrum non molestiae placeat.</p>
+		</div>
 	</div>
 
 	
-	<div id="header">
-		<p>آریا بختیاری</p>
-		<p>|</p>
-		<p>طراح , نویسنده , برنامه نویس </p>
-	</div>
-
-	<!-- <div id="showcase">
-		<p>فنآوری</p>
-		<p>طاقچه</p>
-		<p>آیین</p>
-		<p>زبان</p>
-		<p>سرگذشت</p>
-		<p>سوداگری</p>
-	</div> -->
 
 
 
 </Base>
 
 <style>
-	/* :root{--c1:#1A181B;--c2:#F0F7F4;--c3:#A2E3C4;--c4:#a167a5;--c5:#e56b6f} */
-	#top{
-		padding:.25rem 1rem;
-		background-color: var(--c01);
-		color:var(--c02);
-	}
-	#notarin{
-		width:100%;
-		height:10dvh;
-	}
-	#header{
-		padding:.75rem .5rem;
-		background-color:var(--c1);
-		color:var(--c2);
+	#main{
+		width:720px;
 
-		display: flex;
-		gap:.5rem;
+		display:grid;
+		grid-template-columns: 180px 1fr;
+	}
+	@media screen and (min-width: 1080px) {
+		#main{margin:auto;}
+	}
+
+	#header{
+		grid-column: span 2;
+		
+		width:100%;
+		height:4rem;
+		padding:0 .75rem;
+
+		display:flex;
+		align-items:center;
+
+		font-size:x-large;
+		font-weight:bold;
+
+		color:var(--c03);
+	}
+
+	#sidebar{
+		height:100dvh;
+		width:160px;
+
+		padding:.5rem;
+	}
+	#content{
+		padding:.5rem;
+
+		width:540px;
+
 	}
 	
+
+
+	
+
+	.side_box{
+		display:flex;
+		flex-direction:column;
+		gap:.5rem;
+		margin-bottom:1rem;
+	}
+	.side_box div{
+		display:flex;
+		gap:.5rem;
+	}
+	.side_box img,.theme_selector img{
+		width:16px;
+	}
+	.side_box h2{
+		font-weight:bold;
+	}
+	.side_box a{
+		font-size:small;
+		
+		display: inline-block;
+		margin:0 1.25rem;
+		padding:0 .75rem;
+		border-radius:.25rem;
+		border:2px solid var(--c01);
+		transition:color .25s ,border .25s;
+	}
+	.side_box a:hover{
+		color:var(--c03);
+		border:2px solid var(--c03);
+	}
+
+
+	.theme_selector{padding:1rem 0;display:flex; gap:.5rem;}
+	.dark,.light{
+		width:16px;
+		height:16px;
+		border:2px solid var(--c01);
+		border-radius:.25rem;
+		transition:border .25s;
+	}
+	.dark:hover,.light:hover{border:2px solid var(--c03);}
+	.dark{background-color:var(--c01);}
+	
+	
+	.arya_bakhtiari{
+		font-size:small;
+		padding:.5rem 1rem;
+		font-weight:bold;
+	}
+	.arya_bakhtiari span{color:var(--c04);}
 </style>
